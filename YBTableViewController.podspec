@@ -23,13 +23,13 @@ This is a `UITableViewController` drop-in replacement that allows you to reorder
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'YBTableViewController/Classes/**/*'
+  s.source_files = 'YBTableViewController/Classes/**/*.m'
+  s.public_header_files = 'YBTableViewController/Classes/YBAnimationUtilities.h', 'YBTableViewController/Classes/YBTableViewController.h', 'YBTableViewController/Classes/YBTableViewHeaderFooterView.h'
   
   s.resource_bundles = {
     'YBTableViewController' => ['YBTableViewController/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
