@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AAF1985159173054305AC6ED /* Pods_YBTableViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A0EFC5E193F4270C9C9B4C /* Pods_YBTableViewController_Tests.framework */; };
+		EF42F3A51D8C180B0003DA86 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF42F3A41D8C180B0003DA86 /* ExampleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		A7554665C1DD4F2769585623 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B42F002562B88024643E9A97 /* YBTableViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YBTableViewController.podspec; path = ../YBTableViewController.podspec; sourceTree = "<group>"; };
 		B9D8A988D91271A13D4A6ECA /* Pods_YBTableViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YBTableViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF42F3A31D8C180B0003DA86 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
+		EF42F3A41D8C180B0003DA86 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* YBViewController.h */,
 				6003F5A6195388D20070C39A /* YBViewController.m */,
+				EF42F3A31D8C180B0003DA86 /* ExampleTableViewController.h */,
+				EF42F3A41D8C180B0003DA86 /* ExampleTableViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -392,6 +397,7 @@
 			files = (
 				6003F59E195388D20070C39A /* YBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YBViewController.m in Sources */,
+				EF42F3A51D8C180B0003DA86 /* ExampleTableViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

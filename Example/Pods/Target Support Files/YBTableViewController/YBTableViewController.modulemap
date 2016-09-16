@@ -1,0 +1,6 @@
+framework module YBTableViewController {
+  umbrella header "YBTableViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

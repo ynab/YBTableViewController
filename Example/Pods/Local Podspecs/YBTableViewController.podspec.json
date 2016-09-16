@@ -1,0 +1,33 @@
+{
+  "name": "YBTableViewController",
+  "version": "1.0.0",
+  "summary": "UITableViewController drop-in replacement with section header reordering.",
+  "description": "This is a `UITableViewController` drop-in replacement that allows you to reorder section headers.",
+  "homepage": "https://github.com/ynab/YBTableViewController",
+  "screenshots": [
+    "https://github.com/ynab/YBTableViewController/gh-heros/screenshot_1",
+    "https://github.com/ynab/YBTableViewController/gh-heros/screenshot_2"
+  ],
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "You Need a Budget, LLC": "opensoure@youneedabudget.com"
+  },
+  "source": {
+    "git": "https://github.com/ynab/YBTableViewController.git",
+    "tag": "1.0.0"
+  },
+  "social_media_url": "https://twitter.com/ynab",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YBTableViewController/Classes/**/*",
+  "resource_bundles": {
+    "YBTableViewController": [
+      "YBTableViewController/Assets/*.png"
+    ]
+  },
+  "frameworks": "UIKit"
+}

@@ -3,27 +3,25 @@
 //  YBTableViewController
 //
 //  Created by Enrique Osuna <enrique@youneedabudget.com> on 09/16/2016.
-//  Copyright © 2016 You Need a Budget, LLC. All rights reserved.
+//  Copyright (c) 2016 Enrique Osuna. All rights reserved.
 //
 
 #import "YBViewController.h"
+#import "ExampleTableViewController.h"
 
 @interface YBViewController ()
+
+@property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
 
 @implementation YBViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[ExampleTableViewController new]];
+    [self.navigationController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [self.view addSubview:self.navigationController.view];
 }
 
 @end
