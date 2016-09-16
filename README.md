@@ -8,6 +8,8 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![Hero](https://github.com/ynab/YBTableViewController/blob/master/Candy/hero.gif)
+
 ## Usage
 
 `YBTableViewController` is meant to be a drop-in replacement of `UITableViewController` but gives you the ability to allow reordering section headers.  See the example app for an example of how to use `YBTableViewController`.

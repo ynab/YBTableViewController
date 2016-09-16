@@ -15,7 +15,7 @@ This is a `UITableViewController` drop-in replacement that allows you to reorder
                        DESC
 
   s.homepage         = 'https://github.com/ynab/YBTableViewController'
-  s.screenshots      = 'https://github.com/ynab/YBTableViewController/gh-heros/screenshot_1', 'https://github.com/ynab/YBTableViewController/gh-heros/screenshot_2'
+  s.screenshots      = 'https://github.com/ynab/YBTableViewController/blob/master/Candy/hero.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'You Need a Budget, LLC' => 'opensoure@youneedabudget.com' }
   s.source           = { :git => 'https://github.com/ynab/YBTableViewController.git', :tag => s.version.to_s }
