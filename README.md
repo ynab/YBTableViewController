@@ -10,7 +10,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage
 
-`YBTableViewController` is meant to be a drop-in replacement of `UITableViewController` but gives you the ability to allow reordering section headers.  See the example app for an example of how to use `YBTableViewController` 
+`YBTableViewController` is meant to be a drop-in replacement of `UITableViewController` but gives you the ability to allow reordering section headers.  See the example app for an example of how to use `YBTableViewController`.
 
 ## Requirements
 
