@@ -49,7 +49,6 @@
         if (!_grabberView && _showGrabber && self.showsReorderControl) {
             [UIView performWithoutAnimation:^{
                 _grabberView = [[UIImageView alloc] initWithImage:[[self class] grabberImage]];
-                _grabberView.backgroundColor = [UIColor whiteColor];
                 _grabberView.contentMode = UIViewContentModeCenter;
                 _grabberView.frame = CGRectMake(CGRectGetWidth(self.contentView.frame) - 12, 0, 52, CGRectGetHeight(self.contentView.frame));;
                 
