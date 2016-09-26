@@ -12,7 +12,6 @@
 
 /// Used by `YBTableViewController` to show and hide the grabber.
 @property (nonatomic, assign) BOOL showGrabber;
-- (void)setShowGrabber:(BOOL)showGrabber animated:(BOOL)animated;
 
 /// The grabber image view.
 @property (nonatomic, strong) UIImageView *grabberView;

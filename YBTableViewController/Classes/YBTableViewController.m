@@ -95,14 +95,15 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     if (self.isEditing != editing) {
-        [super setEditing:editing animated:animated];
-        
         // We want to atomically animate the table view's rows and header views showing
         // their editing & reorder controls
-        [UIView animateWithDuration:YBDefaultAnimationDuration(animated) animations:^{
-            [self.tableView setEditing:editing animated:animated];
-            [self setEditingForVisibleSectionHeaderViews:editing animated:animated];
-        }];
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+
+        [super setEditing:editing animated:animated];
+        [self.tableView setEditing:editing animated:animated];
+        [self setEditingForVisibleSectionHeaderViews:editing animated:animated];
+        [UIView commitAnimations];
     }
 }
 

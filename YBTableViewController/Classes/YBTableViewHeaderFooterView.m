@@ -14,24 +14,13 @@
 @interface YBTableViewHeaderFooterView ()
 
 @property (nonatomic, assign) BOOL showGrabber;
-- (void)setShowGrabber:(BOOL)showGrabber animated:(BOOL)animated;
 @property (nonatomic, strong) UIImageView *grabberView;
-
-/// Indicates that the receiver is animating/
-@property (nonatomic, readonly, getter=isAnimating) BOOL animating;
-
-/// The number of inlight animations.
-@property (nonatomic, assign) NSInteger numberOfAnimations;
 
 @end
 
 @implementation YBTableViewHeaderFooterView
 
 #pragma mark - Properties
-
-- (BOOL)isAnimating {
-    return self.numberOfAnimations > 0;
-}
 
 - (void)setEditing:(BOOL)editing {
     [self setEditing:editing animated:NO];
@@ -40,26 +29,20 @@
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     if (_editing != editing) {
         _editing = editing;
+        [self setNeedsLayout];
         
-        [self updateContentViewAnimated:animated];
+        if (!animated) {
+            return;
+        }
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        [self layoutIfNeeded];
+        [UIView commitAnimations];
     }
 }
 
 - (void)setShowGrabber:(BOOL)showGrabber {
-    [self setShowGrabber:showGrabber animated:NO];
-}
-
-+ (UIImage *)grabberImage {
-    static UIImage *grabberImage = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        grabberImage = [UIImage imageNamed:@"grabber" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
-    });
-    
-    return grabberImage;
-}
-
-- (void)setShowGrabber:(BOOL)showGrabber animated:(BOOL)animated {
     if (_showGrabber != showGrabber) {
         _showGrabber = showGrabber;
         
@@ -73,45 +56,24 @@
                 [self insertSubview:_grabberView belowSubview:self.contentView];
             }];
         }
-
-        [self updateContentViewAnimated:animated];
+        [self setNeedsLayout];
     }
+}
+
++ (UIImage *)grabberImage {
+    static UIImage *grabberImage = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        grabberImage = [UIImage imageNamed:@"grabber" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+    });
+    
+    return grabberImage;
 }
 
 #pragma mark - UITableViewHeaderFooterView Overrides
 
 - (void)layoutSubviews {
-    if (!self.isAnimating) {
-        [super layoutSubviews];
-        [self updateContentView];
-    }
-}
-
-- (void)prepareForReuse {
-    [super prepareForReuse];
-    self.editing = NO;
-    self.showGrabber = NO;
-    self.hidden = NO;
-}
-
-#pragma mark - Helper
-
-- (void)updateContentViewAnimated:(BOOL)animated {
-    if (!animated) {
-        // No animation required, update the content view frame and return early
-        [self updateContentView];
-        return;
-    }
-    
-    self.numberOfAnimations++;
-    [UIView animateWithDuration:animated ? 0.25 : 0 animations:^{
-        [self updateContentView];
-    } completion:^(BOOL finished) {
-        self.numberOfAnimations--;
-    }];
-}
-
-- (void)updateContentView {
+    [super layoutSubviews];
     CGRect contentFrame = self.bounds;
     
     if (self.isEditing) {
@@ -122,6 +84,13 @@
     
     self.contentView.frame = contentFrame;
     self.grabberView.frame = CGRectMake(CGRectGetWidth(contentFrame) - 12, 0, 52, CGRectGetHeight(self.contentView.frame));;
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.editing = NO;
+    self.showGrabber = NO;
+    self.hidden = NO;
 }
 
 @end
