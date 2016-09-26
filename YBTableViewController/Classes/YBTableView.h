@@ -17,15 +17,15 @@
  @discussion This view has been designed to be used strictly by `YBTableViewController`. Uses outside
  of this view controller is not supported.
  
- This table view reroutes the suer's data source and delegate to a proxy object responsible for
- diverting certain callbacks to the `YBTableViewController` while it is in the middle of a header 
- view move.
+ This table view reroutes the user's data source and delegate to a proxy object responsible for
+ diverting certain callbacks to the `YBTableViewController` while it is in the middle of a section 
+ header view move.
  */
 @interface YBTableView : UITableView
 
 /**
  @abstract The view controller to forward the proxied calls to.
- @discussion This should be a weakly held property as to avoid a strong circular reference betwee
+ @discussion This should be a weakly held property as to avoid a strong circular reference between
  `YBTableViewController` and the receiver.
  */
 @property (nonatomic, weak) YBTableViewController *viewController;
