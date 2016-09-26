@@ -22,7 +22,6 @@
 		6A520A27BC933F6A1DFBC95BD7D9461F /* YBTableViewHeaderFooterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 204DD72F695CF82F3C3CBC6417BE66FB /* YBTableViewHeaderFooterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E8BD5D0F271B5994068E1B721F0A508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		805A68CA4E82C46C483B3E1FE061CEE3 /* YBTableViewHeaderFooterView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA82C098349900A5E0CE6E951526AE0B /* YBTableViewHeaderFooterView+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DAE716992CC763DA97D335B76AD9D75 /* grabber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34908286D1538C2709C64D070EC633CD /* grabber@2x.png */; };
 		A9A0FF69ADDE513B5FE1BE4AA0E96828 /* YBTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C489FF46F910F251646F6D44AB504DF /* YBTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD3BABDB6EEE860E00963DA55C8C0D56 /* YBTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06882FD3749579010F8966C461DA1B63 /* YBTableViewHeaderFooterView.m */; };
 		AEBA1BE45245A277B96EA7918630D456 /* Pods-YBTableViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8265E195D0BF341F2A527DA6F5A3C9C5 /* Pods-YBTableViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +31,9 @@
 		BE39318961B4B6542A9BFA9BEBAEC6E9 /* Pods-YBTableViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A886127048167D5D353038109EF25971 /* Pods-YBTableViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB5509903D11A9724E7CD54B7D71D429 /* YBTableViewMovingSectionHeaderState.h in Headers */ = {isa = PBXBuildFile; fileRef = 337D36A095EFCA799F03C6DD1443EDD6 /* YBTableViewMovingSectionHeaderState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC7EAA642C9B05F5573985102AA92CBE /* YBAnimationUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EA1C334F5FDD55F08776F8E21E9FCC /* YBAnimationUtilities.m */; };
+		EF8B95CD1D995D3B00830D8E /* grabber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34908286D1538C2709C64D070EC633CD /* grabber@2x.png */; };
+		EF8B95CE1D995D3E00830D8E /* grabber@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC88D8A574D933F4C0A212E360F5E1 /* grabber@3x.png */; };
+		EF8B95CF1D995D4700830D8E /* grabber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34908286D1538C2709C64D070EC633CD /* grabber@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -450,7 +452,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8B95CD1D995D3B00830D8E /* grabber@2x.png in Resources */,
 				17BEF24AA35CB4D37877FD54A053730A /* YBTableViewController.bundle in Resources */,
+				EF8B95CE1D995D3E00830D8E /* grabber@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DAE716992CC763DA97D335B76AD9D75 /* grabber@2x.png in Resources */,
+				EF8B95CF1D995D4700830D8E /* grabber@2x.png in Resources */,
 				6421F5D08A0B7EE3111C2173847ADE3D /* grabber@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
